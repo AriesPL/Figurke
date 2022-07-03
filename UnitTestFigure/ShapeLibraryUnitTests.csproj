@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreaCalculatorByShapeTests.cs" />
     <Compile Include="CircleAreaTests.cs" />
     <Compile Include="TriangleAreaTests.cs" />
     <Compile Include="TriangleClassificatorTests.cs" />

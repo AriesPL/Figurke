@@ -10,19 +10,19 @@ namespace ShapeLibraryUnitTests
 		[TestMethod]
 		public void AreaTriangleTest()
 		{
-			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
+			var calculator = TriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			double[][] dataSet =
 			{
-				new double[] { 9, 40, 41  },
-				new double[] { 12, 24, 26 },
-				new double[] { 4, 20, 21  }
+				new double[] { 9, 40, 41, 180     },
+				new double[] { 12, 24, 26, 143.58 },
+				new double[] { 4, 20, 21, 39.51   }
 			};
 
 			foreach (double[] data in dataSet)
 			{
 				var result = calculator.CalculateTriangleArea(data[0], data[1], data[2]);
-				Assert.IsNotNull(result);
+				Assert.IsTrue(data[3] - result < ParameterPrecission.precission);
 			}
 		}
 
@@ -30,7 +30,7 @@ namespace ShapeLibraryUnitTests
 		[TestMethod]
 		public void ImpossibleTriangleTest()
 		{
-			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
+			var calculator = TriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			double[][] dataSet =
 			{
@@ -48,7 +48,7 @@ namespace ShapeLibraryUnitTests
 		[TestMethod]
 		public void NullTriangleTest()
 		{
-			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
+			var calculator = TriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			double[][] dataSet =
 			{
@@ -66,7 +66,7 @@ namespace ShapeLibraryUnitTests
 		[TestMethod]
 		public void NegativeTriangleTest()
 		{
-			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
+			var calculator = TriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			double[][] dataSet =
 			{

@@ -31,7 +31,7 @@ namespace ShapeLibrary
 
 			var cos = (Math.Pow(x, 2) + Math.Pow(y, 2) - Math.Pow(z, 2)) / 2 * x * y;
 
-			if (Math.Abs(cos) < 0)
+			if (Math.Abs(cos) < 0.01)
 				return TriangleType.Rectangular;
 
 			return cos < 0

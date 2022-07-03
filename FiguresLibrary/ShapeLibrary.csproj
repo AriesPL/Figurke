@@ -7,8 +7,8 @@
     <ProjectGuid>{F67C0EAD-C1F0-4FB2-B06A-27E5C2088648}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FiguresLibrary</RootNamespace>
-    <AssemblyName>FiguresLibrary</AssemblyName>
+    <RootNamespace>ShapeLibrary</RootNamespace>
+    <AssemblyName>ShapeLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreaCalculator\AreaCalculator.cs" />
+    <Compile Include="AreaCalculator\AreaCalculatorFactory.cs" />
     <Compile Include="AreaCalculator\AreaResult.cs" />
     <Compile Include="AreaCalculator\ShapeType.cs" />
     <Compile Include="CircleAreaCalculator\CircleAreaCalculator.cs" />
     <Compile Include="CircleAreaCalculator\CircleAreaCalculatorFactory.cs" />
     <Compile Include="CircleAreaCalculator\ICircleAreaCalculator.cs" />
     <Compile Include="AreaCalculator\IAreaCalculator.cs" />
+    <Compile Include="ParameterPrecission.cs" />
     <Compile Include="TriangleAreaCalculator\TriangleAreaCalculator.cs" />
-    <Compile Include="TriangleAreaCalculator\ITriangleAreaCalculatorFactory.cs" />
+    <Compile Include="TriangleAreaCalculator\TriangleAreaCalculatorFactory.cs" />
     <Compile Include="TriangleAreaCalculator\ITriangleAreaCalculator.cs" />
     <Compile Include="TriangleClassificator\ITriangleClassificator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

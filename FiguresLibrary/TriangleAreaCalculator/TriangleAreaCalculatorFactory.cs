@@ -1,6 +1,6 @@
 ﻿namespace ShapeLibrary
 {
-	public static class ITriangleAreaCalculatorFactory
+	public static class TriangleAreaCalculatorFactory
 	{
 		public static ITriangleAreaCalculator GetTriangleAreaCalculator()
 		{
