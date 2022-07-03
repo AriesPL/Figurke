@@ -49,18 +49,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CircleAreaTest.cs" />
-    <Compile Include="TriangleAreaTest.cs" />
-    <Compile Include="TriangleClassificatorTest.cs" />
+    <Compile Include="CircleAreaTests.cs" />
+    <Compile Include="TriangleAreaTests.cs" />
+    <Compile Include="TriangleClassificatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FiguresLibrary\FiguresLibrary.csproj">
+    <ProjectReference Include="..\FiguresLibrary\ShapeLibrary.csproj">
       <Project>{f67c0ead-c1f0-4fb2-b06a-27e5c2088648}</Project>
-      <Name>FiguresLibrary</Name>
+      <Name>ShapeLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

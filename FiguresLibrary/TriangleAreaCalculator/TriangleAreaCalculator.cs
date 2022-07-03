@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FiguresLibrary
+namespace ShapeLibrary
 {
-	internal class TriangleFigureArea : ITriangleFigureArea
+	internal class TriangleAreaCalculator : ITriangleAreaCalculator
 	{
-		public float GetFigureSize(float a, float b, float c)
+		public float CalculateTriangleArea(float a, float b, float c)
 		{
 			if (a <= 0 || b <= 0 || c <= 0)
 				throw new ArgumentException("Каждая сторона не должна быть меньше или ровна 0.");

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace FiguresLibrary.CircleFigureArea
+namespace ShapeLibrary
 {
-	internal class CircleFigureArea : ICircleFigureArea
+	internal class CircleAreaCalculator : ICircleAreaCalculator
 	{
 		public float GetCircleRadius(float r)
 		{

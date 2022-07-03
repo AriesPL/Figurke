@@ -1,4 +1,4 @@
-﻿namespace FiguresLibrary
+﻿namespace ShapeLibrary
 {
 	public static class TriangleClassificatorFactory
 	{

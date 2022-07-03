@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FiguresLibrary;
+using ShapeLibrary;
 using System;
 
-namespace UnitTestFigure
+namespace ShapeLibraryUnitTests
 {
 	[TestClass]
-	public class TriangleClassificatorTest
+	public class TriangleClassificatorTests
 	{
 
 		[TestMethod]

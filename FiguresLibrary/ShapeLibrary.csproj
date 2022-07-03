@@ -41,14 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AreaCounter\ShapeType.cs" />
-    <Compile Include="CircleFigureArea\CircleFigureArea.cs" />
-    <Compile Include="CircleFigureArea\CircleFugureAreaFactory.cs" />
-    <Compile Include="CircleFigureArea\ICircleFigureArea.cs" />
-    <Compile Include="AreaCounter\IAreaCounter.cs" />
-    <Compile Include="TriangleFigureArea\TriangleFigureArea.cs" />
-    <Compile Include="TriangleFigureArea\TriangleFigureAreaFactory.cs" />
-    <Compile Include="TriangleFigureArea\ITriangleFigureArea.cs" />
+    <Compile Include="AreaCalculator\AreaResult.cs" />
+    <Compile Include="AreaCalculator\ShapeType.cs" />
+    <Compile Include="CircleAreaCalculator\CircleAreaCalculator.cs" />
+    <Compile Include="CircleAreaCalculator\CircleAreaCalculatorFactory.cs" />
+    <Compile Include="CircleAreaCalculator\ICircleAreaCalculator.cs" />
+    <Compile Include="AreaCalculator\IAreaCalculator.cs" />
+    <Compile Include="TriangleAreaCalculator\TriangleAreaCalculator.cs" />
+    <Compile Include="TriangleAreaCalculator\ITriangleAreaCalculatorFactory.cs" />
+    <Compile Include="TriangleAreaCalculator\ITriangleAreaCalculator.cs" />
     <Compile Include="TriangleClassificator\ITriangleClassificator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TriangleClassificator\TriangleClassificator.cs" />

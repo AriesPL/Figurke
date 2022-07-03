@@ -1,16 +1,16 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using FiguresLibrary;
+using ShapeLibrary;
 
-namespace UnitTestFigure
+namespace ShapeLibraryUnitTests
 {
 	[TestClass]
-	public class TriangleAreaTest
+	public class TriangleAreaTests
 	{
 		[TestMethod]
 		public void AreaTriangleTest()
 		{
-			var figureArea = TriangleFigureAreaFactory.GetFigureSize();
+			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			float[][] dataSet =
 			{
@@ -21,7 +21,7 @@ namespace UnitTestFigure
 
 			foreach (float[] data in dataSet)
 			{
-				var result = figureArea.GetFigureSize(data[0], data[1], data[2]);
+				var result = calculator.CalculateTriangleArea(data[0], data[1], data[2]);
 				Assert.IsNotNull(result);
 
 			}
@@ -31,7 +31,7 @@ namespace UnitTestFigure
 		[TestMethod]
 		public void ImpossibleTriangleTest()
 		{
-			var figureArea = TriangleFigureAreaFactory.GetFigureSize();
+			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			float[][] dataSet =
 			{
@@ -42,7 +42,7 @@ namespace UnitTestFigure
 
 			foreach (float[] data in dataSet)
 			{
-				Assert.ThrowsException<ArgumentException>(() => figureArea.GetFigureSize(data[0], data[1], data[2]));
+				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateTriangleArea(data[0], data[1], data[2]));
 			}
 
 
@@ -51,7 +51,7 @@ namespace UnitTestFigure
 		[TestMethod]
 		public void NullTriangleTest()
 		{
-			var figureArea = TriangleFigureAreaFactory.GetFigureSize();
+			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			float[][] dataSet =
 			{
@@ -62,14 +62,14 @@ namespace UnitTestFigure
 
 			foreach (float[] data in dataSet)
 			{
-				Assert.ThrowsException<ArgumentException>(() => figureArea.GetFigureSize(data[0], data[1], data[2]));
+				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateTriangleArea(data[0], data[1], data[2]));
 			}
 		}
 
 		[TestMethod]
 		public void NegativeTriangleTest()
 		{
-			var figureArea = TriangleFigureAreaFactory.GetFigureSize();
+			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
 			float[][] dataSet =
 			{
@@ -80,7 +80,7 @@ namespace UnitTestFigure
 
 			foreach (float[] data in dataSet)
 			{
-				Assert.ThrowsException<ArgumentException>(() => figureArea.GetFigureSize(data[0], data[1], data[2]));
+				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateTriangleArea(data[0], data[1], data[2]));
 			}
 		}
 	}
