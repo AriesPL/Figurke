@@ -15,13 +15,4 @@
 		public ShapeType ShapeType { get; set; }
 
 	}
-
-	public enum ShapeType
-	{
-		Triangle,
-		Circle,
-		Square,
-		Rectangle,
-		Ellipse
-	}
 }

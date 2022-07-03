@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircleAreaTest.cs" />
+    <Compile Include="TriangleAreaTest.cs" />
     <Compile Include="TriangleClassificatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

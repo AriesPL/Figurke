@@ -5,8 +5,6 @@ namespace FiguresLibrary
 {
 	internal class TriangleClassificator : ITriangleClassificator
 	{
-		private const double Precission = 0.01;
-
 		/// <summary>
 		/// Определение типа треугольника
 		/// </summary>
@@ -17,11 +15,8 @@ namespace FiguresLibrary
 		/// <exception cref="ArgumentException"></exception>
 		public TriangleType GetTriangleType(float a, float b, float c)
 		{
-			if (a < 0 || b < 0 || c < 0)
-				throw new ArgumentException("Каждая сторона должна быть больше 0.");
-
-			if (Math.Abs(a) < Precission || Math.Abs(b) < Precission || Math.Abs(c) < Precission)
-				throw new ArgumentException("Каждая сторона не должна быть ровна 0.");
+			if (a <= 0 || b <= 0 || c <= 0)
+				throw new ArgumentException("Каждая сторона не должна быть меньше или ровна 0.");
 
 			var unsorted = new List<float> { a, b, c };
 			var sorted = unsorted.OrderBy(d => d).ToList();
@@ -35,7 +30,7 @@ namespace FiguresLibrary
 
 			var cos = (Math.Pow(x, 2) + Math.Pow(y, 2) - Math.Pow(z, 2)) / 2 * x * y;
 
-			if (Math.Abs(cos) < Precission)
+			if (Math.Abs(cos) < 0)
 				return TriangleType.Rectangular;
 
 			return cos < 0
