@@ -13,14 +13,14 @@ namespace ShapeLibraryUnitTests
 		{
 			var classificator = TriangleClassificatorFactory.GetTriangleClassificator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 3, 3, 4 },
-				new float[] { 4, 3, 3 },
-				new float[] { 3, 4, 3 }
+				new double[] { 3, 3, 4 },
+				new double[] { 4, 3, 3 },
+				new double[] { 3, 4, 3 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				var result = classificator.GetTriangleType(data[0], data[1], data[2]);
 				Assert.AreEqual(TriangleType.Acute, result);
@@ -32,14 +32,14 @@ namespace ShapeLibraryUnitTests
 		{
 			var classificator = TriangleClassificatorFactory.GetTriangleClassificator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 3, 4, 5 },
-				new float[] { 4, 5, 3 },
-				new float[] { 5, 4, 3 }
+				new double[] { 3, 4, 5 },
+				new double[] { 4, 5, 3 },
+				new double[] { 5, 4, 3 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				var result = classificator.GetTriangleType(data[0], data[1], data[2]);
 				Assert.AreEqual(TriangleType.Rectangular, result);
@@ -51,19 +51,18 @@ namespace ShapeLibraryUnitTests
 		{
 			var classificator = TriangleClassificatorFactory.GetTriangleClassificator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 3, 3, 5 },
-				new float[] { 5, 3, 3 },
-				new float[] { 3, 5, 3 }
+				new double[] { 3, 3, 5 },
+				new double[] { 5, 3, 3 },
+				new double[] { 3, 5, 3 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				var result = classificator.GetTriangleType(data[0], data[1], data[2]);
 				Assert.AreEqual(TriangleType.Obtuse, result);
 			}
-
 		}
 
 		[TestMethod]
@@ -71,19 +70,17 @@ namespace ShapeLibraryUnitTests
 		{
 			var classificator = TriangleClassificatorFactory.GetTriangleClassificator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 999, 3, 5 },
-				new float[] { 5, 999, 3 },
-				new float[] { 3, 5, 999 }
+				new double[] { 999, 3, 5 },
+				new double[] { 5, 999, 3 },
+				new double[] { 3, 5, 999 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				Assert.ThrowsException<ArgumentException>(() => classificator.GetTriangleType(data[0], data[1], data[2]));
 			}
-
-
 		}
 
 		[TestMethod]
@@ -91,18 +88,17 @@ namespace ShapeLibraryUnitTests
 		{
 			var classificator = TriangleClassificatorFactory.GetTriangleClassificator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 0, 3, 5 },
-				new float[] { 5, 0, 3 },
-				new float[] { 3, 5, 0 }
+				new double[] { 0, 3, 5 },
+				new double[] { 5, 0, 3 },
+				new double[] { 3, 5, 0 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				Assert.ThrowsException<ArgumentException>(() => classificator.GetTriangleType(data[0], data[1], data[2]));
 			}
-
 		}
 
 		[TestMethod]
@@ -110,18 +106,17 @@ namespace ShapeLibraryUnitTests
 		{
 			var classificator = TriangleClassificatorFactory.GetTriangleClassificator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { -1, 3, 5 },
-				new float[] { 5, -1, 3 },
-				new float[] { 3, 5, -1 }
+				new double[] { -1, 3, 5 },
+				new double[] { 5, -1, 3 },
+				new double[] { 3, 5, -1 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				Assert.ThrowsException<ArgumentException>(() => classificator.GetTriangleType(data[0], data[1], data[2]));
 			}
 		}
-
 	}
 }

@@ -12,18 +12,17 @@ namespace ShapeLibraryUnitTests
 		{
 			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 9, 40, 41  },
-				new float[] { 12, 24, 26 },
-				new float[] { 4, 20, 21  }
+				new double[] { 9, 40, 41  },
+				new double[] { 12, 24, 26 },
+				new double[] { 4, 20, 21  }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				var result = calculator.CalculateTriangleArea(data[0], data[1], data[2]);
 				Assert.IsNotNull(result);
-
 			}
 		}
 
@@ -33,19 +32,17 @@ namespace ShapeLibraryUnitTests
 		{
 			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 999, 3, 5 },
-				new float[] { 5, 999, 3 },
-				new float[] { 3, 5, 999 }
+				new double[] { 999, 3, 5 },
+				new double[] { 5, 999, 3 },
+				new double[] { 3, 5, 999 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateTriangleArea(data[0], data[1], data[2]));
 			}
-
-
 		}
 
 		[TestMethod]
@@ -53,14 +50,14 @@ namespace ShapeLibraryUnitTests
 		{
 			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { 0, 3, 5 },
-				new float[] { 5, 0, 3 },
-				new float[] { 3, 5, 0 }
+				new double[] { 0, 3, 5 },
+				new double[] { 5, 0, 3 },
+				new double[] { 3, 5, 0 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateTriangleArea(data[0], data[1], data[2]));
 			}
@@ -71,14 +68,14 @@ namespace ShapeLibraryUnitTests
 		{
 			var calculator = ITriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
 
-			float[][] dataSet =
+			double[][] dataSet =
 			{
-				new float[] { -1, 3, 5 },
-				new float[] { 5, -1, 3 },
-				new float[] { 3, 5, -1 }
+				new double[] { -1, 3, 5 },
+				new double[] { 5, -1, 3 },
+				new double[] { 3, 5, -1 }
 			};
 
-			foreach (float[] data in dataSet)
+			foreach (double[] data in dataSet)
 			{
 				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateTriangleArea(data[0], data[1], data[2]));
 			}

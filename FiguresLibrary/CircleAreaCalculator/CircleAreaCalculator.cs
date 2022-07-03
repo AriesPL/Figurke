@@ -4,14 +4,14 @@ namespace ShapeLibrary
 {
 	internal class CircleAreaCalculator : ICircleAreaCalculator
 	{
-		public float GetCircleRadius(float r)
+		public double CalculateCircleArea(double radius)
 		{
-			if (r <= 0)
+			if (radius <= 0)
 				throw new ArgumentException("Значение радуса круга не должно быть меньше или равно 0.");
 
-			double sumArea = Math.PI * Math.Pow(r, 2);
+			double area = Math.PI * Math.Pow(radius, 2);
 
-			return (float)sumArea;
+			return area;
 		}
 	}
 }

@@ -2,6 +2,6 @@
 {
 	public interface ICircleAreaCalculator
 	{
-		float GetCircleRadius(float r);
+		double CalculateCircleArea(double radius);
 	}
 }

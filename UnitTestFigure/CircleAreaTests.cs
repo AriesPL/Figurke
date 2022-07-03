@@ -12,13 +12,12 @@ namespace ShapeLibraryUnitTests
 		{
 			var calculator = CircleAreaCalculatorFactory.GetCircleAreaCalculator();
 
-			float[] dataSet = { 9, 2, 3 };
+			double[] dataSet = { 9, 2, 3 };
 
-			foreach (float data in dataSet)
+			foreach (double data in dataSet)
 			{
-				var result = calculator.GetCircleRadius(data);
+				var result = calculator.CalculateCircleArea(data);
 				Assert.IsNotNull(result);
-
 			}
 		}
 
@@ -27,11 +26,11 @@ namespace ShapeLibraryUnitTests
 		{
 			var calculator = CircleAreaCalculatorFactory.GetCircleAreaCalculator();
 
-			float[] dataSet = { -1, -25, -66 };
+			double[] dataSet = { -1, -25, -66 };
 
-			foreach (float data in dataSet)
+			foreach (double data in dataSet)
 			{
-				Assert.ThrowsException<ArgumentException>(() => calculator.GetCircleRadius(data));
+				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateCircleArea(data));
 			}
 		}
 
@@ -40,9 +39,9 @@ namespace ShapeLibraryUnitTests
 		{
 			var calculator = CircleAreaCalculatorFactory.GetCircleAreaCalculator();
 
-			float data = 0;
+			double data = 0;
 
-			Assert.ThrowsException<ArgumentException>(() => calculator.GetCircleRadius(data));
+			Assert.ThrowsException<ArgumentException>(() => calculator.CalculateCircleArea(data));
 		}
 	}
 }

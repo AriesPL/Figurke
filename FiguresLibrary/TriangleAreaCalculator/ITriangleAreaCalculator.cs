@@ -2,6 +2,6 @@
 {
 	public interface ITriangleAreaCalculator
 	{
-		float CalculateTriangleArea(float a, float b, float c); 
+		double CalculateTriangleArea(double a, double b, double c); 
 	}
 }

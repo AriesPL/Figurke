@@ -2,6 +2,6 @@
 {
 	public interface ITriangleClassificator
 	{
-		TriangleType GetTriangleType(float a, float b, float c);
+		TriangleType GetTriangleType(double a, double b, double c);
 	}
 }

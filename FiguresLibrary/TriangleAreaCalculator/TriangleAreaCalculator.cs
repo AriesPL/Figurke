@@ -6,12 +6,12 @@ namespace ShapeLibrary
 {
 	internal class TriangleAreaCalculator : ITriangleAreaCalculator
 	{
-		public float CalculateTriangleArea(float a, float b, float c)
+		public double CalculateTriangleArea(double a, double b, double c)
 		{
 			if (a <= 0 || b <= 0 || c <= 0)
 				throw new ArgumentException("Каждая сторона не должна быть меньше или ровна 0.");
 
-			var unsorted = new List<float> { a, b, c };
+			var unsorted = new List<double> { a, b, c };
 			var sorted = unsorted.OrderBy(d => d).ToList();
 
 			var x = sorted[0];
@@ -23,9 +23,9 @@ namespace ShapeLibrary
 
 			double p = (a + b + c) / 2;
 
-			double sumArea = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+			double area = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
 
-			return (float)sumArea;
+			return area;
 		}
 	}
 }

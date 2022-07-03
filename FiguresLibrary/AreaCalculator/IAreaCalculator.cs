@@ -2,9 +2,8 @@
 {
 	public interface IAreaCalculator
 	{
-		AreaResult[] GetArea(params float[] parameter);
+		AreaResult[] CalculateArea(params double[] parameter);
 
-		float GetArea(ShapeType shapeType, params float[] parameter);
-
+		double CalculateArea(ShapeType shapeType, params double[] parameter);
 	}
 }

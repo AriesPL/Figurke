@@ -14,12 +14,12 @@ namespace ShapeLibrary
 		/// <param name="c">Высота</param>
 		/// <returns>Возвращает тип триугольника</returns>
 		/// <exception cref="ArgumentException"></exception>
-		public TriangleType GetTriangleType(float a, float b, float c)
+		public TriangleType GetTriangleType(double a, double b, double c)
 		{
 			if (a <= 0 || b <= 0 || c <= 0)
 				throw new ArgumentException("Каждая сторона не должна быть меньше или ровна 0.");
 
-			var unsorted = new List<float> { a, b, c };
+			var unsorted = new List<double> { a, b, c };
 			var sorted = unsorted.OrderBy(d => d).ToList();
 
 			var x = sorted[0];

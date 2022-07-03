@@ -2,9 +2,8 @@
 {
 	public class AreaResult
 	{
-		public float Area { get; set; }
+		public double Area { get; set; }
 
 		public ShapeType ShapeType { get; set; }
-
 	}
 }
