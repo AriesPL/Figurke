@@ -6,6 +6,14 @@ namespace ShapeLibrary
 {
 	internal class TriangleAreaCalculator : ITriangleAreaCalculator
 	{
+		/// <summary>
+		/// Определение площади триугольника
+		/// </summary>
+		/// <param name="a"></param>
+		/// <param name="b"></param>
+		/// <param name="c"></param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException"></exception>
 		public double CalculateTriangleArea(double a, double b, double c)
 		{
 			if (a <= 0 || b <= 0 || c <= 0)

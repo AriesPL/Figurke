@@ -22,7 +22,7 @@ namespace ShapeLibraryUnitTests
 			foreach (double[] data in dataSet)
 			{
 				var result = calculator.CalculateCircleArea(data[0]);
-				Assert.IsTrue(Math.Abs(data[1] - result) < 0.01);
+				Assert.IsTrue(Math.Abs(data[1] - result) < ParameterPrecission.precission);
 			}
 		}
 

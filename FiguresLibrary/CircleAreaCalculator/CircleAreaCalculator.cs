@@ -4,6 +4,12 @@ namespace ShapeLibrary
 {
 	internal class CircleAreaCalculator : ICircleAreaCalculator
 	{
+		/// <summary>
+		/// Определение площади круга
+		/// </summary>
+		/// <param name="radius"></param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException"></exception>
 		public double CalculateCircleArea(double radius)
 		{
 			if (radius <= 0)
