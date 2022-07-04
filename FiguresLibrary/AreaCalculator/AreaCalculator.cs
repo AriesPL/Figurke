@@ -9,24 +9,26 @@ namespace ShapeLibrary
 	internal class AreaCalculator : IAreaCalculator
 	{
 		/// <summary>
-		/// Определение типа фигуры по параметрам
+		/// Площадь фигуры без знания типа фигуры.
 		/// </summary>
 		/// <param name="parameter"></param>
 		/// <returns></returns>
 		/// <exception cref="ArgumentException"></exception>
-		public ShapeType CalculateArea(params double[] parameter)
+		public double CalculateArea(params double[] parameter)
 		{
 			switch (parameter.Length)
 			{
 				case 1:
 					CheckParametrLength(parameter, 1);
 
-					return ShapeType.Circle;
+					var circleArea = CircleAreaCalculatorFactory.GetCircleAreaCalculator();
+					return circleArea.CalculateCircleArea(parameter[0]);
 					
 				case 3:
 					CheckParametrLength(parameter, 3);
 
-					return ShapeType.Triangle;
+					var triangleArea = TriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
+					return triangleArea.CalculateTriangleArea(parameter[0], parameter[1], parameter[2]);
 
 				default:
 					throw new ArgumentException("Расчет данной формы не поддерживается.");
@@ -42,7 +44,6 @@ namespace ShapeLibrary
 		/// <exception cref="ArgumentException"></exception>
 		public double CalculateArea(ShapeType shapeType, params double[] parameter)
 		{
-
 			switch (shapeType)
 			{
 				case ShapeType.Triangle:
@@ -71,5 +72,4 @@ namespace ShapeLibrary
 				throw new ArgumentException("Не верное количество параметров.");
 		}
 	}
-
 }

@@ -36,8 +36,6 @@ namespace UnitTestFigure
 				new double[] { 2, 12.56    },
 				new double[] { 10, 314.15  },
 				new double[] { 40, 5026.54 },
-				
-
 			};
 
 			foreach (double[] data in dataSet)
