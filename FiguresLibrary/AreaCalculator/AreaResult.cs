@@ -1,6 +1,6 @@
 ﻿namespace ShapeLibrary
 {
-	public class AreaResult
+	public class AreaResult 
 	{
 		public double Area { get; set; }
 

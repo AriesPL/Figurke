@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AreaCalculatorByParameterTest.cs" />
+    <Compile Include="AreaCalculatorByParameterTests.cs" />
     <Compile Include="AreaCalculatorByShapeTests.cs" />
     <Compile Include="CircleAreaTests.cs" />
     <Compile Include="TriangleAreaTests.cs" />

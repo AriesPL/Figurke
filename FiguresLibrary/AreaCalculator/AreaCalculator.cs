@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShapeLibrary
 {
@@ -14,25 +11,22 @@ namespace ShapeLibrary
 		/// <param name="parameter"></param>
 		/// <returns></returns>
 		/// <exception cref="ArgumentException"></exception>
-		public double CalculateArea(params double[] parameter)
+		public AreaResult[] CalculateArea(params double[] parameter)
 		{
+			var results = new List<AreaResult>();
+
 			switch (parameter.Length)
 			{
 				case 1:
-					CheckParametrLength(parameter, 1);
-
-					var circleArea = CircleAreaCalculatorFactory.GetCircleAreaCalculator();
-					return circleArea.CalculateCircleArea(parameter[0]);
-					
+					results.Add(new AreaResult(CalculateArea(ShapeType.Circle,parameter),ShapeType.Circle));
+					break;
 				case 3:
-					CheckParametrLength(parameter, 3);
-
-					var triangleArea = TriangleAreaCalculatorFactory.GetTriangleAreaCalculator();
-					return triangleArea.CalculateTriangleArea(parameter[0], parameter[1], parameter[2]);
-
+					results.Add(new AreaResult(CalculateArea(ShapeType.Triangle,parameter),ShapeType.Triangle));
+					break;
 				default:
-					throw new ArgumentException("Расчет данной формы не поддерживается.");
+					throw new ArgumentException("Расcчет данной формы не поддерживается.");
 			}
+			return results.ToArray();
 		}
 
 		/// <summary>
@@ -62,7 +56,7 @@ namespace ShapeLibrary
 				case ShapeType.Rectangle:
 				case ShapeType.Ellipse:
 				default:
-					throw new ArgumentException("Расчет данной формы не поддерживается.");
+					throw new ArgumentException("Расcчет данной формы не поддерживается.");
 			}
 		}
 
