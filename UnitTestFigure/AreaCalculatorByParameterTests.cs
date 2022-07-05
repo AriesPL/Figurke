@@ -2,7 +2,7 @@
 using System;
 using ShapeLibrary;
 
-namespace UnitTestFigure
+namespace ShapeLibraryUnitTests
 {
 	[TestClass]
 	public class AreaCalculatorByParameterTests
@@ -13,7 +13,7 @@ namespace UnitTestFigure
 			var calculator = AreaCalculatorFactory.GetAreaCalculator();
 
 			double[] dataSet = { 2, 10, 40 };
-			
+
 			foreach (double data in dataSet)
 			{
 				var result = calculator.CalculateArea(data);

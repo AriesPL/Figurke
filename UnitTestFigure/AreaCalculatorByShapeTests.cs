@@ -2,7 +2,7 @@
 using System;
 using ShapeLibrary;
 
-namespace UnitTestFigure
+namespace ShapeLibraryUnitTests
 {
 	[TestClass]
 	public class AreaCalculatorByShapeTests
