@@ -1,5 +1,8 @@
 ﻿namespace ShapeLibrary
 {
+	/// <summary>
+	/// Типы триугольников
+	/// </summary>
 	public enum TriangleType
 	{
 		/// <summary>

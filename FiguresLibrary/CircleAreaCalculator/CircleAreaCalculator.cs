@@ -5,10 +5,10 @@ namespace ShapeLibrary
 	internal class CircleAreaCalculator : ICircleAreaCalculator
 	{
 		/// <summary>
-		/// Определение площади круга
+		/// Формула определениея площади круга по радиусу
 		/// </summary>
 		/// <param name="radius"></param>
-		/// <returns></returns>
+		/// <returns>Площадь круга</returns>
 		/// <exception cref="ArgumentException"></exception>
 		public double CalculateCircleArea(double radius)
 		{

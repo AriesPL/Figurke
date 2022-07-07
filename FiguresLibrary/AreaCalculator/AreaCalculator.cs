@@ -6,10 +6,10 @@ namespace ShapeLibrary
 	internal class AreaCalculator : IAreaCalculator
 	{
 		/// <summary>
-		/// Площадь фигуры без знания типа фигуры.
+		/// Определитель типа фигуры по количеству параметров
 		/// </summary>
 		/// <param name="parameter"></param>
-		/// <returns></returns>
+		/// <returns>Колекцию фигур</returns>
 		/// <exception cref="ArgumentException"></exception>
 		public AreaResult[] CalculateArea(params double[] parameter)
 		{
@@ -34,7 +34,7 @@ namespace ShapeLibrary
 		/// </summary>
 		/// <param name="shapeType"></param>
 		/// <param name="parameter"></param>
-		/// <returns></returns>
+		/// <returns>Фигуру</returns>
 		/// <exception cref="ArgumentException"></exception>
 		public double CalculateArea(ShapeType shapeType, params double[] parameter)
 		{
