@@ -22,7 +22,7 @@ namespace ShapeLibraryUnitTests
 			foreach (double[] data in dataSet)
 			{
 				var result = calculator.CalculateArea(ShapeType.Triangle, data[0], data[1], data[2]);
-				Assert.IsTrue(Math.Abs(data[3] - result) < ParameterPrecission.precission);
+				Assert.IsTrue(Math.Abs(data[3] - result) < Constants.precission);
 			}
 		}
 
@@ -41,7 +41,25 @@ namespace ShapeLibraryUnitTests
 			foreach (double[] data in dataSet)
 			{
 				var result = calculator.CalculateArea(ShapeType.Circle, data[0]);
-				Assert.IsTrue(Math.Abs(data[1] - result) < ParameterPrecission.precission);
+				Assert.IsTrue(Math.Abs(data[1] - result) < Constants.precission);
+			}
+		}
+
+		[TestMethod]
+		public void UnknownTypeTest()
+		{
+			var calculator = AreaCalculatorFactory.GetAreaCalculator();
+
+			double[][] dataSet =
+			{
+				new double[] { 2, 2, 2, 2 },
+				new double[] { 4, 4, 4, 4 },
+				new double[] { 6, 6, 6, 6 },
+			};
+
+			foreach (double[] data in dataSet)
+			{
+				Assert.ThrowsException<ArgumentException>(() => calculator.CalculateArea(ShapeType.Square, data[0], data[1], data[2], data[3]));
 			}
 		}
 	}

@@ -7,7 +7,7 @@ namespace ShapeLibrary
 	internal class TriangleClassificator : ITriangleClassificator
 	{
 		/// <summary>
-		/// Определение типа треугольника
+		/// Формула определения типа треугольника по 3 переменным
 		/// </summary>
 		/// <param name="a">Длина</param>
 		/// <param name="b">Ширина</param>

@@ -22,7 +22,7 @@ namespace ShapeLibraryUnitTests
 			foreach (double[] data in dataSet)
 			{
 				var result = calculator.CalculateTriangleArea(data[0], data[1], data[2]);
-				Assert.IsTrue(data[3] - result < ParameterPrecission.precission);
+				Assert.IsTrue(data[3] - result < Constants.precission);
 			}
 		}
 

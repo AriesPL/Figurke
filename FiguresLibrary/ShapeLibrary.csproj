@@ -49,7 +49,7 @@
     <Compile Include="CircleAreaCalculator\CircleAreaCalculatorFactory.cs" />
     <Compile Include="CircleAreaCalculator\ICircleAreaCalculator.cs" />
     <Compile Include="AreaCalculator\IAreaCalculator.cs" />
-    <Compile Include="ParameterPrecission.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="TriangleAreaCalculator\TriangleAreaCalculator.cs" />
     <Compile Include="TriangleAreaCalculator\TriangleAreaCalculatorFactory.cs" />
     <Compile Include="TriangleAreaCalculator\ITriangleAreaCalculator.cs" />
